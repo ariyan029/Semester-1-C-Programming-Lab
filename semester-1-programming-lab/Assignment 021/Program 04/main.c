@@ -18,18 +18,17 @@ int main ()
         printf("%d ", arr1[i]);
     }
     printf("\n");
-    int mul = 0;
-    for (int i = 0; i < n ; i ++){
-    if (i%2 != 0){
-     printf("The element at index %d is %d\n", i, arr1[i]);
-     mul *= arr1[i];
-
-       }
-    
+    int product = 1;
+    for (int i = 0; i < n; i++)`
+    {
+        if (i % 2 != 0)
+        {
+            printf("The element at index %d is %d\n", i, arr1[i]);
+            product *= arr1[i];
+        }
     }
-    printf("The multiplication of the elements at odd indexes is %d\n", mul);
-    return 0;
-    
+    printf("The product of the elements at odd indexes is %d\n", product);
+   return 0; 
 }
 
 
