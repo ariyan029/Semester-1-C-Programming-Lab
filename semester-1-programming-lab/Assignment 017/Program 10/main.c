@@ -1,20 +1,17 @@
 /*
-i)  Calculate GCD of two +ve integers without using recursion and then with.
+j)  Calculate LCM of two +ve integers.
 */
 
 #include <stdio.h>
-int get_gcd(int a, int b) {
-    int gcd;
+int get_lcm(int a, int b) {
+    int gcd, lcm;
     for (int i = 1; i <= a; i++) {
         if (a % i == 0 && b % i == 0)
             gcd = i;
     }
-    return gcd;
-}
-int gcd(int a, int b) {
-    if (b == 0)
-        return a;
-    return gcd(b, a % b);
+
+    lcm = (a * b) / gcd;
+    return lcm;
 }
 int main() {
     int a, b;
@@ -22,7 +19,7 @@ int main() {
     printf("Enter two +ve integer : ");
     scanf("%d%d", &a, &b);
 
-    printf("GCD of %d & %d = %d\n", a, b, gcd(a, b));
+    printf("LCM of %d & %d = %d\n", a, b, get_lcm(a, b));
 
     return 0;
 }
@@ -30,5 +27,5 @@ int main() {
 /*
 -----------Output------------
 Enter two +ve integer : 98 56
-GCD of 98 & 56 = 14
+LCM of 98 & 56 = 392
 */
